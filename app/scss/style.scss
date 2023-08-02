@@ -1,11 +1,173 @@
 @import 'vars';
-@import 'fonts';
 @import 'reset';
 @import 'global';
 
+/* header */
+.header{
+	min-height: 100vh;
+}
+
+.nav{
+	padding: 55px 0;
+	position: relative;
+	z-index: 1;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	display: block;
+	width: 270px;
+	height: 55px;
+}
+
+.menu{
+	padding: 0 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__item + &__item{
+		margin-left: 35px;
+	}
+
+	&__link{
+		display: block;
+		padding: 0 5px;
+		transition: $trans;
+		
+		&:hover{
+			color: $primary-color;
+		}
+	}
+}
+
+.phone{
+	display: flex;
+	align-items: center;
+
+	&__icon{
+		width: 24px;
+		height: 24px;
+	}
+
+	&__number{
+		margin-left: 10px;
+		transition: $trans;
+
+		&:hover{
+			color: $primary-color;
+		}
+	}
+}
 
 
+.heading{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	width: 100vw;
+	height: 100vh;
 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&__img{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		
+		img{
+			object-fit: cover;
+			width: 100vw;
+			height: 100vh;
+			z-index: -1;
+		}
+	}
+
+	&__wrapper{
+		max-width: 1200px;
+		padding: 0px 15px;
+		margin: 0 auto;
+	}
+
+	&__text{
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 500;
+	}
+
+	&__title{
+		margin-top: 24px;
+
+		font-size: 64px;
+		line-height: 88px;
+		font-weight: 700;
+	}
+
+	&__footer{
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__btn{
+		display: inline-block;
+		padding: 38px 64px;
+		
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 500;
+		color: #fff;
+
+		background-color: $secondary-color;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: $trans;
+
+		&:hover{
+			background-color: $primary-color;
+		}
+	}
+
+	&__social{
+		display: flex;
+
+		&-item + &-item{
+			margin-left: 25px;
+		}
+		
+		&-link{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			width: 48px;
+			height: 48px;
+
+			font-weight: 600;
+			border-radius: 50%;
+			border: 1px solid #fff;
+
+			transition: $trans;
+
+			&:hover{
+				background-color: $primary-color;
+			}
+		}
+	}
+
+}
 
 
 

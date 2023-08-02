@@ -5,13 +5,90 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="css/libs.min.css" />
 		<link rel="stylesheet" href="css/style.min.css" />
-		<title>Title</title>
+		<title>Hello Brand</title>
 	</head>
 	<body>
 		<div class="wrapper">
-			<header class="header"></header>
+			<header class="header">
+				<div class="container">
+					<nav class="nav">
+						<a href="/" class="logo">
+							<picture class="logo__img">
+								<source
+									srcset="images/logo.webp"
+									type="image/webp"
+									media="(min-width:960px)"
+								/>
+								<img src="images/logo2.webp" alt="logo" />
+							</picture>
+						</a>
+						<ul class="menu">
+							<li class="menu__item">
+								<a href="/" class="menu__link">À la carte</a>
+							</li>
+							<li class="menu__item">
+								<a href="/" class="menu__link">Wijnkaart</a>
+							</li>
+							<li class="menu__item">
+								<a href="/" class="menu__link">Lunchmenu</a>
+							</li>
+							<li class="menu__item">
+								<a href="/" class="menu__link">Contact</a>
+							</li>
+						</ul>
+						<a class="phone" href="tel:+3292825725">
+							<svg class="phone__icon">
+								<use xlink:href="images/sprite.svg#phone"></use>
+							</svg>
+							<span class="phone__number">+32 9 282 57 25</span>
+						</a>
+					</nav>
+					<section class="heading">
+						<div class="heading__wrapper">
+							<p class="heading__text">OPEN EVERYDAY 6AM - 9PM</p>
+							<h1 class="heading__title">
+								A bad day with lunch is better than a good day without it.
+							</h1>
+							<div class="heading__footer">
+								<button class="heading__btn">Reserve a table</button>
+								<ul class="heading__social">
+									<li class="heading__social-item">
+										<a href="/" class="heading__social-link">Fb</a>
+									</li>
+									<li class="heading__social-item">
+										<a href="/" class="heading__social-link">Tg</a>
+									</li>
+									<li class="heading__social-item">
+										<a href="/" class="heading__social-link">Ins</a>
+									</li>
+									<li class="heading__social-item">
+										<a href="/" class="heading__social-link">Tw</a>
+									</li>
+								</ul>
+						</div>
+							<picture class="heading__img">
+								<source
+									srcset="images/heading-big.webp"
+									type="image/webp"
+									media="(min-width:960px)"
+								/>
+								<source
+									srcset="images/heading.webp"
+									type="image/webp"
+									media="(min-width:540px)"
+								/>
+								<img src="images/heading-small.jpg" alt="alt text for img" />
+							</picture>
+						</div>
+					</section>
+				</div>
+			</header>
 			<main class="main"></main>
 			<footer class="footer"></footer>
 		</div>
