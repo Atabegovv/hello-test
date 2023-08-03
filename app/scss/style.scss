@@ -3,12 +3,12 @@
 @import 'global';
 
 /* header */
-.header{
+.header {
 	position: relative;
 	min-height: 100vh;
 }
 
-.nav{
+.nav {
 	padding: 55px 0;
 	position: relative;
 	z-index: 1;
@@ -18,60 +18,59 @@
 	align-items: center;
 }
 
-.logo{
+.logo {
 	display: block;
 	width: 270px;
 	height: 55px;
 }
 
-.menu{
+.menu {
 	padding: 0 30px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
-	&__item + &__item{
+	&__item + &__item {
 		margin-left: 35px;
 	}
 
-	&__link{
+	&__link {
 		display: block;
 		padding: 0 5px;
 		transition: $trans;
-		
-		&:hover{
+
+		&:hover {
 			color: $primary-color;
 		}
 	}
 }
 
-.phone{
+.phone {
 	display: flex;
 	align-items: center;
 
-	&__icon{
+	&__icon {
 		width: 24px;
 		height: 24px;
 	}
 
-	&__number{
+	&__number {
 		margin-left: 10px;
 		transition: $trans;
 
-		&:hover{
+		&:hover {
 			color: $primary-color;
 		}
 	}
 }
 
-
-.heading{
+.heading {
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	
+
 	width: 100vw;
 	height: 100vh;
 
@@ -79,34 +78,34 @@
 	flex-direction: column;
 	justify-content: center;
 
-	&__img{
+	&__img {
 		position: absolute;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
 		z-index: -1;
-		
-		img{
+
+		img {
 			object-fit: cover;
 			width: 100vw;
 			height: 100vh;
 		}
 	}
 
-	&__wrapper{
+	&__wrapper {
 		max-width: 1200px;
 		padding: 0px 15px;
 		margin: 0 auto;
 	}
 
-	&__text{
+	&__text {
 		font-size: 24px;
 		line-height: 32px;
 		font-weight: 500;
 	}
 
-	&__title{
+	&__title {
 		margin-top: 24px;
 
 		font-size: 64px;
@@ -114,17 +113,17 @@
 		font-weight: 700;
 	}
 
-	&__footer{
+	&__footer {
 		margin-top: 40px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-	&__btn{
+	&__btn {
 		display: inline-block;
 		padding: 38px 64px;
-		
+
 		font-size: 18px;
 		line-height: 24px;
 		font-weight: 500;
@@ -135,19 +134,19 @@
 		cursor: pointer;
 		transition: $trans;
 
-		&:hover{
+		&:hover {
 			background-color: $primary-color;
 		}
 	}
 
-	&__social{
+	&__social {
 		display: flex;
 
-		&-item + &-item{
+		&-item + &-item {
 			margin-left: 25px;
 		}
-		
-		&-link{
+
+		&-link {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -161,25 +160,23 @@
 
 			transition: $trans;
 
-			&:hover{
+			&:hover {
 				background-color: $primary-color;
 			}
 		}
 	}
-
 }
 
-
-.degustation{
+.degustation {
 	padding: 80px 0;
-	
-	&__wrapper{
+
+	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 		gap: 30px;
 	}
 
-	&__list{
+	&__list {
 		max-width: 470px;
 		width: 100%;
 
@@ -188,13 +185,13 @@
 		gap: 40px;
 	}
 
-	&__item{
+	&__item {
 		position: relative;
 		color: #000;
 
-		&::after{
+		&::after {
 			position: absolute;
-			content: "";
+			content: '';
 			width: 100%;
 			height: 1px;
 			bottom: -20px;
@@ -203,13 +200,13 @@
 		}
 	}
 
-	&__time{
+	&__time {
 		font-size: 24px;
 		line-height: 32px;
 		font-weight: 600;
 	}
 
-	&__programm{
+	&__programm {
 		margin-top: 10px;
 
 		display: flex;
@@ -220,20 +217,122 @@
 		font-weight: 400;
 	}
 
-	&__programm-decor{
+	&__programm-decor {
 		width: 40px;
 		background-image: url(../images/sprite.svg#decor-dots);
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
 
-	&__img{
+	&__img {
 		max-width: 670px;
 		object-fit: contain;
 	}
 }
 
+.feedback {
+	padding: 220px 0 170px;
+	background-color: $secondary-color;
+	text-align: center;
 
+	.container{
+		position: relative;
+	}
+
+	&__content {
+		position: relative;
+		max-width: 780px;
+		width: 100%;
+		padding: 90px 195px 50px;
+		margin: 0 auto;
+		font-weight: 600;
+		line-height: 40px;
+		color: $primary-color;
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 83px;
+			height: 58px;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			background-image: url(../images/sprite.svg#k);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+	&__title {
+		font-size: 36px;
+	}
+
+	&__text {
+		margin-top: 20px;
+		font-weight: 400;
+		color: #fff;
+	}
+
+	&__author {
+		text-transform: uppercase;
+		margin-top: 40px;
+		font-size: 24px;
+		letter-spacing: 7px;
+	}
+
+	.swiper {
+		&-btn {
+			position: absolute;
+			width: 70px;
+			height: 70px;
+			border-radius: 4px;
+			border: 1px solid transparent;
+			background-image: url(../images/sprite.svg#arrow);
+			background-repeat: no-repeat;
+			background-position: center;
+			top: 50%;
+			transform: translateY(-50%);
+			cursor: pointer;
+			transition: $trans;
+			z-index: 10;
+
+			&:hover{
+				border-color: $primary-color;
+			}
+
+			&-prev {
+				left: 0;
+			}
+
+			&-next {
+				right: 0;
+				top: 40%;
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+.footer{
+	padding: 40px 0;
+
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__logo{
+		display: block;
+		max-width: 270px;
+	}
+
+	.heading__social-link{
+		color: #000;
+		border-color: #000;
+	}
+}
 
 /* media requests */
 @import 'media';

@@ -76,7 +76,7 @@ function scripts(){
         // 'node_modules/rateyo/min/jquery.rateyo.min.js',
         // 'node_modules/mixitup/dist/mixitup.min.js',
         // 'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
-        // 'node_modules/swiper/swiper-bundle.min.js',
+         'node_modules/swiper/swiper-bundle.min.js',
         // 'node_modules/scrollreveal/dist/scrollreveal.min.js',
         'app/js/main.js'
     ])
@@ -96,7 +96,7 @@ function styleLibs(){
     // 'node_modules/rateyo/min/jquery.rateyo.min.css',
     // 'node_modules/magnific-popup/dist/magnific-popup.css',
     // 'node_modules/@fancyapps/ui/dist/fancybox.css',
-    // 'node_modules/swiper/swiper-bundle.min.css',
+     'node_modules/swiper/swiper-bundle.min.css',
   ])
     .pipe(concat('libs.min.css'))
     .pipe(cssmin())
