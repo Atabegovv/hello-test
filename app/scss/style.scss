@@ -30,18 +30,38 @@
 	justify-content: space-between;
 	align-items: center;
 
-	&__item + &__item {
-		margin-left: 35px;
+	&__item{
+		position: relative;
+
+		&::after {
+			position: absolute;
+			content: '';
+			height: 2px;
+			width: 0;
+			background-color: $primary-color;
+			border-radius: 2px;
+			left: 50%;
+			bottom: -5px;
+			transition: $trans;
+			z-index: 10;
+		}
+		&:hover {
+			color: $primary-color;
+			&::after {
+				width: 100%;
+				left: 0;
+			}
+		}
+
+		& + & {
+			margin-left: 35px;
+		}
 	}
 
 	&__link {
 		display: block;
 		padding: 0 5px;
 		transition: $trans;
-
-		&:hover {
-			color: $primary-color;
-		}
 	}
 }
 
@@ -162,6 +182,7 @@
 
 			&:hover {
 				background-color: $primary-color;
+				border-color: transparent;
 			}
 		}
 	}
@@ -235,7 +256,7 @@
 	background-color: $secondary-color;
 	text-align: center;
 
-	.container{
+	.container {
 		position: relative;
 	}
 
@@ -296,7 +317,7 @@
 			transition: $trans;
 			z-index: 10;
 
-			&:hover{
+			&:hover {
 				border-color: $primary-color;
 			}
 
@@ -313,24 +334,29 @@
 	}
 }
 
-.footer{
+.footer {
 	padding: 40px 0;
 
-	&__wrapper{
+	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 30px;
 	}
 
-	&__logo{
+	&__logo {
 		display: block;
 		max-width: 270px;
 	}
 
-	.heading__social-link{
+	.heading__social-link {
 		color: #000;
 		border-color: #000;
+
+		&:hover {
+			color: $secondary-color;
+			border-color: transparent;
+		}
 	}
 }
 
