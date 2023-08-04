@@ -56,7 +56,9 @@
 								A bad day with lunch is better than a good day without it.
 							</h1>
 							<div class="heading__footer">
-								<button class="heading__btn btn-popup">Reserve a table</button>
+								<button class="heading__btn btn-popup modal-show">
+									Reserve a table
+								</button>
 								<ul class="heading__social">
 									<li class="heading__social-item">
 										<a href="/" class="heading__social-link btn-social">Fb</a>
@@ -229,6 +231,28 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="modal">
+				<span class="overlay"></span>
+				<div class="modal-box">
+					<button class="modal-close">✕</button>
+					<form class="modal-form">
+						<input
+							type="text"
+							class="modal-form__input"
+							placeholder="Enter your name"
+							required
+						/>
+						<input
+							type="tel"
+							class="modal-form__input"
+							placeholder="Enter your phone"
+							required
+						/>
+						<button class="modal-form__btn " type="submit">Send</button>
+					</form>
+				</div>
+			</div>
 		</div>
 		<script src="js/scripts.min.js"></script>
 	</body>

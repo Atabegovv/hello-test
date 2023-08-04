@@ -32,6 +32,8 @@ img {
 .btn-popup{
    transition: $trans;
    position: relative;
+	 cursor: pointer;
+
    &::after{
       position: absolute;
       content: "";
@@ -48,11 +50,11 @@ img {
       color: $secondary-color;
       box-shadow: 0 0 10px rgba($primary-color, .5);
       &::after{
-         border: 1px solid $primary-color;
-         width: calc(100% + 10px);
-         height: calc(100% + 10px);
-         left: -5px;
-         top: -5px;
+				border: 1px solid $primary-color;
+				width: calc(100% + 10px);
+				height: calc(100% + 10px);
+				left: -5px;
+				top: -5px;
       }
    }
 }

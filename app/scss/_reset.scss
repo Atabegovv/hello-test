@@ -29,6 +29,10 @@ input,button{
   padding: 0;
   margin: 0;
   background: transparent;
+
+	&:focus{
+		outline: 1px solid $primary-color;
+	}
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
