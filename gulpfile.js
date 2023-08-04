@@ -60,7 +60,8 @@ function build(){
         'app/css/style.min.css',
         'app/fonts/**/*',
         'app/js/scripts.min.js',
-        'app/*.html'
+        'app/*.html',
+        'app/*.*',
     ],      {base: 'app'})
             .pipe(dest('dist'))
 }
@@ -68,7 +69,7 @@ function build(){
 
 function scripts(){
     return src([
-        // 'node_modules/jquery/dist/jquery.min.js',
+         'node_modules/jquery/dist/jquery.min.js',
         // 'node_modules/slick-carousel/slick/slick.min.js',
         // 'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
         // 'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',

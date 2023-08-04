@@ -441,12 +441,18 @@
 		}
 	}
 
-	&.active{
+	&.active {
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
 		background-color: rgba(0, 0, 0, 0.8);
 		z-index: 99;
+
+		.overlay {
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+		}
 	}
 }
 
@@ -455,8 +461,6 @@
 	pointer-events: auto;
 	transform: translate(-50%, -50%) scale(1);
 }
-
-
 
 /* media requests */
 @import 'media';

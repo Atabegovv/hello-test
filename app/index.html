@@ -237,14 +237,23 @@
 				<div class="modal-box">
 					<button class="modal-close">✕</button>
 					<form class="modal-form">
+
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="Tzeezotje">
+						<input type="hidden" name="admin_email" value="siteschool2021@mail.ru">
+						<input type="hidden" name="form_subject" value="Reserve a table">
+						<!-- END Hidden Required Fields -->
+
 						<input
 							type="text"
+							name="Name"
 							class="modal-form__input"
 							placeholder="Enter your name"
 							required
 						/>
 						<input
 							type="tel"
+							name="Phone"
 							class="modal-form__input"
 							placeholder="Enter your phone"
 							required
