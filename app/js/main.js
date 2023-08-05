@@ -27,6 +27,8 @@ const swiper = new Swiper('.swiper', {
 	},
 	grabCursor: true,
 	speed: 1000,
+	slidesPerView: 1,
+	spaceBetween: 50,
 	effect: 'flip',
 	loop: true,
 });
@@ -38,3 +40,9 @@ const modal = document.querySelector('.modal'),
 showBtn.addEventListener('click', () => modal.classList.add('active'));
 closeBtn.addEventListener('click', () => modal.classList.remove('active'));
 overlay.addEventListener('click', () => modal.classList.remove('active'));
+
+
+document.querySelector('.burger').onclick = function () {
+	document.querySelector('.menu').classList.toggle('active');
+	document.querySelector('.burger-line').classList.toggle('active');
+};

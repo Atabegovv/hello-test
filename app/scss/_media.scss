@@ -1,10 +1,163 @@
-@media (max-width: 1320px){}
-@media (max-width: 1140px){}
-@media (max-width: 960px){}
-@media (max-width: 720px){}
-@media (max-width: 540px){}
+@media (max-width: 1140px) {
+	.burger {
+		display: block;
+	}
+
+	.menu {
+		position: absolute;
+		max-width: 320px;
+		width: 100%;
+		padding: 50px 0;
+		border-radius: 16px;
+		top: 110px;
+		right: 0;
+		margin: 0;
+		background-color: $secondary-color;
+		border-top: 1px solid $primary-color;
+		border-bottom: 1px solid $primary-color;
+
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: 30px;
+		z-index: 20;
+
+		animation: to-up 0.5s ease;
+		display: none;
+
+		&__item + &__item {
+			margin-left: 0;
+		}
+
+		&.active {
+			display: flex;
+		}
+	}
+
+	.phone {
+		display: none;
+	}
+
+	.heading {
+		position: static;
+		width: auto;
+		height: auto;
+		color: #000;
+
+		&__wrapper {
+			max-width: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		&__img {
+			position: static;
+
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				margin-top: 50px;
+			}
+		}
+
+		&__social-link {
+			border-color: #000;
+		}
+	}
+
+	.degustation__img {
+		max-width: 500px;
+	}
+}
+@media (max-width: 960px) {
+	.degustation__wrapper {
+		flex-direction: column;
+		align-items: center;
+		gap: 50px;
+	}
+
+	.feedback{
+		padding: 90px 0;
+		line-height: 1.5;
+
+		&__title{
+			font-size: 24px;
+		}
+
+		&__text{
+			margin-top: 10px;
+		}
+
+		&__author{
+			margin-top: 20px;
+			font-size: 20px;
+			letter-spacing: 4px;
+		}
 
 
+		.swiper{
+			max-width: 580px;
+		}
+	}
 
-@media (min-width: 541px){}
-@media (min-width: 721px){}
+}
+@media (max-width: 720px) {
+	.nav {
+		padding-top: 15px;
+	}
+
+	.menu {
+		top: 80px;
+	}
+
+	.heading {
+		&__title {
+			font-size: 36px;
+			line-height: 50px;
+		}
+
+		&__btn {
+			padding: 20px 30px;
+		}
+	}
+
+	.feedback .swiper-btn{
+		top: 100%;
+		transform: translateX(0);
+		border-color: $primary-color;
+	}
+
+	.footer__wrapper {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 540px) {
+	.degustation {
+		text-align: center;
+
+		&__programm {
+			flex-direction: column;
+			gap: 0;
+
+			&-decor {
+				display: none;
+			}
+		}
+	}
+
+	.heading {
+		text-align: center;
+
+		&__footer {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	.burger{
+		margin-left: 30px;
+	}
+}

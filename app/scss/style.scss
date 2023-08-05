@@ -65,6 +65,71 @@
 	}
 }
 
+.burger {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	display: none;
+
+	&-line {
+		display: block;
+		width: 30px;
+		height: 2px;
+		background-color: $secondary-color;
+		border-radius: 2px;
+		position: relative;
+		&::before,
+		&::after {
+			position: absolute;
+			left: 0;
+			content: '';
+			width: 30px;
+			height: 2px;
+			border-radius: 2px;
+			background-color: $secondary-color;
+			transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+		}
+
+		&::before {
+			top: -10px;
+		}
+		&::after {
+			top: 10px;
+		}
+
+		&.active {
+			background-color: transparent;
+			&::before {
+				transform: rotate(135deg);
+				top: 0;
+				transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+			}
+			&::after {
+				transform: rotate(-135deg);
+				top: 0;
+				transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+			}
+		}
+	}
+
+	&:focus{
+		outline: none;
+	}
+}
+
+@keyframes to-up {
+  from{
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .phone {
 	display: flex;
 	align-items: center;
@@ -262,10 +327,6 @@
 
 	&__content {
 		position: relative;
-		max-width: 780px;
-		width: 100%;
-		padding: 90px 195px 50px;
-		margin: 0 auto;
 		font-weight: 600;
 		line-height: 40px;
 		color: $primary-color;
@@ -275,7 +336,7 @@
 			content: '';
 			width: 83px;
 			height: 58px;
-			top: 0;
+			top: -90px;
 			left: 50%;
 			transform: translateX(-50%);
 			background-image: url(../images/sprite.svg#k);
@@ -302,13 +363,15 @@
 	}
 
 	.swiper {
+		max-width: 780px;
+		padding: 90px 0px 0px;
+
 		&-btn {
 			position: absolute;
 			width: 70px;
 			height: 70px;
 			border-radius: 4px;
 			border: 1px solid transparent;
-			background-image: url(../images/sprite.svg#arrow);
 			background-repeat: no-repeat;
 			background-position: center;
 			top: 50%;
@@ -323,12 +386,12 @@
 
 			&-prev {
 				left: 0;
+				background-image: url(../images/sprite.svg#arrow);
 			}
 
 			&-next {
 				right: 0;
-				top: 40%;
-				transform: rotate(180deg);
+				background-image: url(../images/sprite.svg#arrow2);
 			}
 		}
 	}
